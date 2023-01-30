@@ -10,20 +10,18 @@
     <h2>Blog o programowaniu</h2>
     <h3>Autor: Bastian8004</h3>
     </div>
+        {% comment "komentarz"  %}
+        Tutaj lista postów
+        {%endcomment%}
+        {% for post in posts %}
     <div>
-    <p>Akapit</p>
-    <em>To jest wyróżniony tekst</em>
-    <br>
-    <b>To jest pogrubienie tekstu</b>
-    <br>
-    <a href="https://strefakursow.pl">LINK</a>
+        <p>Opublikowany: {{post.publish_date}}</p>
+        <h2><a href="">{{post.title}}</a></h2>
+        <em>{{post.text|linebreaksbr}}</em>
     </div>
+        {% endfor%}
     <div>
-    <ul>
-        <li>Element listy</li>
-        <li>Element listy</li>
-        <li>Element listy</li>
-    </ul>
+
     </div>
     </body>
 </html>
